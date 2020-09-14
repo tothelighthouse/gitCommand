@@ -98,3 +98,27 @@ git pull
 git log --oneline
 cat file1.txt
 ```
+
+# 브랜치 만들기
+
+```bash
+cd hello-git-cli
+git log --online
+git branch
+git branch mybranch1
+git branch
+git log --online --all
+```
+
+# 02 CLI로 checkout 하기
+
+```bash
+gti checkout mybranch1
+git branch
+git log --oneline --all
+cat file1.txt
+echo "third - my branch" >> file1.txt
+cat file1.txt
+git status
+
+```
