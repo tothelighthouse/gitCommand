@@ -59,6 +59,7 @@
 
 # 원격저장소 등록 및 push
 
+```bash
 git remote add origin https://github.com/~~~~~
 git remote -v
 git push fail!!!!
@@ -66,28 +67,35 @@ git push fail!!!!
 git push -u origin master
 git log --online -n1
 git push
+```
 
 # git clone 사용해 보기
 
+```bash
 pwd
 cd ..
 git clone https://github.com/~~~~~~ fail!!!
+```
 
 # git clone 으로 로컬 저장소 복제하기
 
+```bash
 git clone https://github.com/~~~~~~ .
 ls
 cd hello-git cli2
 git log --oneline
 git remote -v
+```
 
 # 추가 commit and push
 
+```bash
 echo "second" >> file1.txt
 cat file1.txt
 git commit -a # 스테이징 없이 바로 커밋
 git push
 git log --oneline
+```
 
 # git pull
 
@@ -120,5 +128,7 @@ cat file1.txt
 echo "third - my branch" >> file1.txt
 cat file1.txt
 git status
-
+git add file1.txt
+git commit
+git log --oneline --all
 ```
