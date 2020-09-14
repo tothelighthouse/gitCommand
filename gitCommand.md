@@ -134,3 +134,34 @@ git add file1.txt
 git commit
 git log --oneline --all
 ```
+
+## 커밋 후 빨리감기 병합
+
+```bash
+echo "fourth -my branch" >> file1.txt
+cat file1.txt
+git status
+git add file1.txt
+git commit
+git log --oneline --all -graph
+git checkout master
+cat file1.txt
+git merge mybranch1
+git log --online --all -graph
+cat file1.txt
+```
+
+## 현재 브랜치를 두 단계 이전으로 되돌리기
+
+```bash
+git reset --hard HEAD~2
+git log --oneline --all
+```
+
+### reset --hard 명령어와 동일
+
+```bash
+git checkout HEAD~2
+git branch -f master
+git checkout master
+```
