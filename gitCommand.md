@@ -198,7 +198,11 @@ git log --oneline --all -n2
   git push origin v0.1
 ```
 
-# CLI로 3way 병합하기
+3. ## CLI로 3way 병합하기
+
+### 긴급한 버그 처리 시나리오
+
+#### 새로운 브랜치 및 커밋 생성
 
 ```bash
 git checkout master
@@ -211,7 +215,7 @@ git commit
 git log --oneline --graph --all -n2
 ```
 
-# hotfix 브랜치 생성, 커밋, master 에 병합
+#### hotfix 브랜치 생성, 커밋, master 에 병합
 
 ```bash
 git checkout -b hotfix master
@@ -225,7 +229,7 @@ git merge hotfix
 git push
 ```
 
-# 병합 및 충돌 해결하기 1
+#### 병합 및 충돌 해결하기 1
 
 ```bash
 git checkout feature1
@@ -234,7 +238,7 @@ git merge master
 git status
 ```
 
-# 병합 및 충돌 해결하기 2
+#### 병합 및 충돌 해결하기 2
 
 ```bash
 cat file1.txt
