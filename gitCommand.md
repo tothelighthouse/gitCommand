@@ -198,7 +198,7 @@ git log --oneline --all -n2
   git push origin v0.1
 ```
 
-3. ## CLI로 3way 병합하기
+## 3. CLI로 3way 병합하기
 
 ### 긴급한 버그 처리 시나리오
 
