@@ -17,45 +17,45 @@
 
 # Git 전역 옵션 설정
 
-git config --global user.name "Cat Hanbit"
-git config --global user.email "hello@gmail.com"
+- git config --global user.name "Cat Hanbit"
+- git config --global user.email "hello@gmail.com"
 
 # Git 기본 에디터 확인
 
-git config core.editor
-git config --global core.editor
-git config --system core.editor
+- git config core.editor
+- git config --global core.editor
+- git config --system core.editor
 
 # 간단한 텍스트 파일 생성하고 확인 하기
 
-echo "hello git"
-echo "hello git" >> file1.txt
-ls
-git status
+- echo "hello git"
+- echo "hello git" >> file1.txt
+- ls
+- git status
 
 # 생성한 파일 스테이지에 추가하기
 
-git add file1.txt
-git status
+- git add file1.txt
+- git status
 
 # 스테이지에서 파일 언스테이징 하기
 
-git status
-git reset file1.txt
-git status
-ls
-cat file1.txt
+- git status
+- git reset file1.txt
+- git status
+- ls
+- cat file1.txt
 
 # 첫번째 CLI 커밋
 
-git add file1.txt
-git status
-git commit
+1. git add file1.txt
+1. git status
+1. git commit
 
 # 커밋 확인 해보기
 
-git status
-git log --oneline --graph --all --decorate
+1. git status
+1. git log --oneline --graph --all --decorate
 
 # 원격저장소 등록 및 push
 
