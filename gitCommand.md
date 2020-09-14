@@ -88,3 +88,10 @@ cat file1.txt
 git commit -a # 스테이징 없이 바로 커밋
 git push
 git log --oneline
+
+# git pull
+
+```bash
+
+
+```
