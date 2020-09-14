@@ -8,7 +8,7 @@
 # Git 저장소 초기화
 
 - 1. git init
-- 2. ls a
-- 3. git status
+- 1. ls a
+- 1. git status
 
 # Git 전역 옵션 설정
