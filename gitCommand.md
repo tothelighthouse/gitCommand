@@ -165,3 +165,119 @@ git checkout HEAD~2
 git branch -f master
 git checkout master
 ```
+
+## rebase, push, branch 제거
+
+```bash
+git checkout mybranch1
+git rebase master
+git log --oneline --all
+git checkout master
+git rebase mybranch1
+git log --oneline --all
+git push
+git branch -d mybranch1
+git log --oneline --all -n2
+```
+
+## tag 작성
+
+```bash
+git log --online
+git tag -a -m "first tag adding" v0.1
+git push origin v0.1
+```
+
+# CLI로 3way 병합하기
+
+```bash
+git checkout master
+git checkout -b feature1
+echo "기능 1 추가" >> file1.txt
+
+git add file1.txt
+git commit
+
+git log --oneline --graph --all -n2
+```
+
+# hotfix 브랜치 생성, 커밋, master 에 병합
+
+```bash
+git checkout -b hotfix master
+git log --oneline --all -n2
+echo "some hot fix" >> file1.txt
+git add file1.txt
+git commit
+git log --oneline -n1
+git checkout master
+git merge hotfix
+git push
+```
+
+# 병합 및 충돌 해결하기 1
+
+```bash
+git checkout feature1
+git log --oneline --all
+git merge master
+git status
+```
+
+# 병합 및 충돌 해결하기 2
+
+```bash
+cat file1.txt
+git add file1.txt
+git status
+git commit
+git log --oneline --all --graph -n4
+```
+
+# reset --hard 및 rebase 시도
+
+```bash
+git checkout feature1
+git reset --hard HEAD~
+git log --oneline --graph --all -n3
+git rebase master
+git push
+```
+
+# 충돌 해결 및 rebase 이어서 하기
+
+```bash
+git status # 충돌 수동 해결 할것
+git add file1.txt
+git status
+git rebase --continue
+git log --oneline --graph --all -n2
+git checkout master
+git merge feature1
+```
+
+# 유용한 rebase의 사용법
+
+## 1. 보통 커밋 만들기
+
+## 2. 가지 커밋 만들기
+
+## 3. git pull 수행 결과
+
+## 4. rebase 로 가지 없애기
+
+# 임시 브랜치 사용하기
+
+## 임시 브랜치 생성 사용 및 삭제
+
+```bash
+git branch test feature1
+git checkout test
+echo "아무말 대잔치" > test.txt
+git add .
+git commit -m "임시 커밋"
+git log --oneline --graph --all -n4
+git checkout master
+git branch -D test
+git log --oneline --graph --all -n3
+```
