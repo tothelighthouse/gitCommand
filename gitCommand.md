@@ -248,7 +248,7 @@ git log --oneline --all --graph -n4
 
 ### rebase 사용하기
 
-#### reset --hard 및 rebase 시도
+1. #### reset --hard 및 rebase 시도
 
 ```bash
 git checkout feature1
@@ -258,7 +258,7 @@ git rebase master
 git push
 ```
 
-#### 충돌 해결 및 rebase 이어서 하기
+2. #### 충돌 해결 및 rebase 이어서 하기
 
 ```bash
 git status # 충돌 수동 해결 할것
@@ -274,11 +274,32 @@ git merge feature1
 
 1. #### 보통 커밋 만들기
 
-1. #### 가지 커밋 만들기
+```bash
+echo "mster1" > master1.txt
+git add master1.txt
+git commit -m "master 커밋 1"
+git push origin master
+git log --oneline -n1
+ls
+```
 
-1. #### git pull 수행 결과
+2. #### 가지 커밋 만들기
 
-1. #### rebase 로 가지 없애기
+```bash
+
+```
+
+3. #### git pull 수행 결과
+
+```bash
+
+```
+
+4. #### rebase 로 가지 없애기
+
+```bash
+
+```
 
 ### 임시 브랜치 사용하기
 
