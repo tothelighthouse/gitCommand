@@ -193,9 +193,9 @@ git log --oneline --all -n2
 #### tag 작성
 
 ```bash
-git log --online
-git tag -a -m "first tag adding" v0.1
-git push origin v0.1
+  git log --online
+  git tag -a -m "first tag adding" v0.1
+  git push origin v0.1
 ```
 
 # CLI로 3way 병합하기
