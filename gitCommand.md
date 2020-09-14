@@ -286,19 +286,27 @@ ls
 2. #### 가지 커밋 만들기
 
 ```bash
-
+git reset --hard HEAD~
+echo "master2" > master2.txt
+git add .
+git commit -m "master2 커밋"
+git log --oneline --graph --all -n3
 ```
 
 3. #### git pull 수행 결과
 
 ```bash
-
+git pull
+git log --oneline --graph --all -n4
 ```
 
 4. #### rebase 로 가지 없애기
 
 ```bash
-
+git reset --hard HEAD~
+git rebase origin/master
+git log --oneline --all --graph -n3
+git push
 ```
 
 ### 임시 브랜치 사용하기
