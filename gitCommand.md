@@ -92,6 +92,9 @@ git log --oneline
 # git pull
 
 ```bash
-
-
+cd hello-git-cli
+git log --oneline
+git pull
+git log --oneline
+cat file1.txt
 ```
