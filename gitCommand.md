@@ -107,7 +107,11 @@ git log --oneline
 cat file1.txt
 ```
 
-# 브랜치 만들기
+# Chapter 7 브랜치 생성 및 조작하기
+
+## 01. CLI로 브랜치 생성하기
+
+### 브랜치 만들기
 
 ```bash
 cd hello-git-cli
@@ -118,9 +122,9 @@ git branch
 git log --online --all
 ```
 
-# 02. CLI로 checkout 하기
+## 02. CLI로 checkout 하기
 
-## 브랜치 만들기
+#### 브랜치 만들기
 
 ```bash
 gti checkout mybranch1
@@ -135,7 +139,7 @@ git commit
 git log --oneline --all
 ```
 
-## 커밋 후 빨리감기 병합
+#### 커밋 후 빨리감기 병합
 
 ```bash
 echo "fourth -my branch" >> file1.txt
@@ -151,14 +155,16 @@ git log --online --all -graph
 cat file1.txt
 ```
 
-## 현재 브랜치를 두 단계 이전으로 되돌리기
+### reset --hard로 브랜치 되돌리기
+
+#### 현재 브랜치를 두 단계 이전으로 되돌리기
 
 ```bash
 git reset --hard HEAD~2
 git log --oneline --all
 ```
 
-### reset --hard 명령어와 동일
+#### @reset --hard 명령어와 동일
 
 ```bash
 git checkout HEAD~2
@@ -166,7 +172,9 @@ git branch -f master
 git checkout master
 ```
 
-## rebase, push, branch 제거
+### 빨리 감기 병합 상황에서 rebase 해보기
+
+#### rebase, push, branch 제거
 
 ```bash
 git checkout mybranch1
@@ -180,7 +188,9 @@ git branch -d mybranch1
 git log --oneline --all -n2
 ```
 
-## tag 작성
+### 배포 버전에 태깅하기
+
+#### tag 작성
 
 ```bash
 git log --online
