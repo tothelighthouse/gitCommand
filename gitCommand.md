@@ -118,7 +118,7 @@ git branch
 git log --online --all
 ```
 
-# 02 CLI로 checkout 하기
+# 02. CLI로 checkout 하기
 
 ## 브랜치 만들기
 
