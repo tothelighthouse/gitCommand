@@ -244,7 +244,11 @@ git commit
 git log --oneline --all --graph -n4
 ```
 
-# reset --hard 및 rebase 시도
+## 04. CLI로 rebase 해보기
+
+### rebase 사용하기
+
+#### reset --hard 및 rebase 시도
 
 ```bash
 git checkout feature1
@@ -254,7 +258,7 @@ git rebase master
 git push
 ```
 
-# 충돌 해결 및 rebase 이어서 하기
+#### 충돌 해결 및 rebase 이어서 하기
 
 ```bash
 git status # 충돌 수동 해결 할것
@@ -266,19 +270,19 @@ git checkout master
 git merge feature1
 ```
 
-# 유용한 rebase의 사용법
+### 유용한 rebase의 사용법
 
-## 1. 보통 커밋 만들기
+#### 1. 보통 커밋 만들기
 
-## 2. 가지 커밋 만들기
+#### 2. 가지 커밋 만들기
 
-## 3. git pull 수행 결과
+#### 3. git pull 수행 결과
 
-## 4. rebase 로 가지 없애기
+#### 4. rebase 로 가지 없애기
 
-# 임시 브랜치 사용하기
+### 임시 브랜치 사용하기
 
-## 임시 브랜치 생성 사용 및 삭제
+#### 임시 브랜치 생성 사용 및 삭제
 
 ```bash
 git branch test feature1
